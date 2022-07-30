@@ -21,7 +21,7 @@ app.MapGet("/observation/{zip}", async (string zip, [FromQuery] int? days, Tempe
   }
   var startData = DateTime.UtcNow - TimeSpan.FromDays(days.Value);
   var results = await db.Temperature
-    .Where(percip => percip.ZipCode == zip && percip.CreatedOn > startData)
+    .Where(precip => precip.ZipCode == zip && precip.CreatedOn > startData)
     .ToListAsync();
 
   return Results.Ok(results);

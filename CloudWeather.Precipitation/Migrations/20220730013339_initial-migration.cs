@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CloudWeather.Percipitation.Migrations
+namespace CloudWeather.Precipitation.Migrations
 {
     public partial class initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "percipitation",
+                name: "precipitation",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -21,14 +21,14 @@ namespace CloudWeather.Percipitation.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_percipitation", x => x.Id);
+                    table.PrimaryKey("PK_precipitation", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "percipitation");
+                name: "precipitation");
         }
     }
 }
