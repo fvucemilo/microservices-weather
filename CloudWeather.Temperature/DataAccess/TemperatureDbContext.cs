@@ -12,8 +12,7 @@ namespace CloudWeather.Temperature.DataAccess {
       SnakeCaseIdentityTableNames(modelBuilder);
     }
 
-    private static void SnakeCaseIdentityTableNames(ModelBuilder modelBuilder)
-    {
+    private static void SnakeCaseIdentityTableNames(ModelBuilder modelBuilder) {
       modelBuilder.Entity<Temperature>(b => { b.ToTable("temperature"); });
     }
   }

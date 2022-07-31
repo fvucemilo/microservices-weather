@@ -84,6 +84,7 @@ namespace CloudWeather.Report.BusinessLogic {
         .ReadFromJsonAsync<List<PrecipitationModel>>(jsonSerializerOptions);
       return precipData ?? new List<PrecipitationModel>();
     }
+
     private string BuildPrecipitationServiceEndpoint(string zip, int days) {
       var tempServiceProtocol = _weatherConfig.PrecipDataProtocol;
       var tempServiceHost = _weatherConfig.PrecipDataHost;

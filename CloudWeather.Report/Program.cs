@@ -12,7 +12,7 @@ builder.Services.AddOptions();
 builder.Services.Configure<WeatherDataConfig>(builder.Configuration.GetSection("WeatherDataConfig"));
 
 builder.Services.AddDbContext<WeatherReportDbContext>(
-  opts =>  {
+  opts => {
     opts.EnableSensitiveDataLogging();
     opts.EnableDetailedErrors();
     opts.UseNpgsql(builder.Configuration.GetConnectionString("AppDb"));
